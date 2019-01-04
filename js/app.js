@@ -1,4 +1,3 @@
-
 document.addEventListener( 'DOMContentLoaded', () =>{
   const h1 = document.querySelector('h1')
   h1.textContent ='Snake and Ladder!'
@@ -58,5 +57,10 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     console.log('render board')
   }
   renderBoard()
+class player{
+  constructor(){
+    this.
+  }
 
+}
 })

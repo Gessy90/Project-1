@@ -18,10 +18,11 @@ h1{
 button{
   color:$color;
 }
-.player{
+#player{
   position: absolute;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: 1px solid;
+  background-color: black;
 }
