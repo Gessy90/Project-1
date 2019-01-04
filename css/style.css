@@ -4,24 +4,34 @@ body{
   width: 50%;
   margin: auto;
   height: 100vh;
-}
-  .game{
-    width: 500px;
-    display: block;
-    height: 500px;
-    margin: 10px 0;
-    background-color: green;
+} 
+.game{
+ display:flex;
+  background:green;
+  width: 500px;
+  height: 500px;
   }
-
+ .box{
+  flex-wrap: wrap;
+  flex: 100;
+}
+.first,.second,.third{
+  float:right;
+  width:60%;
+}
+.fourth,.fifth{
+  float:left;
+  width:60%;
+}
   button{
     color:red;
   }
-  .player{
+  /* .player{
     position: absolute;
     height: 40px;
     width: 40px;
     border-radius: 50%;
     border: 1px solid;
     background-color: black;
-  }
+  } */
   /*# sourceMappingURL=style.css.map */
