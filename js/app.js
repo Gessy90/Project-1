@@ -1,17 +1,33 @@
+
 document.addEventListener( 'DOMContentLoaded', () =>{
   const h1 = document.querySelector('h1')
   h1.textContent ='Snake and Ladder!'
 
+  // const roll = 0 //Rolling the dice
+  // const move = 1 //Moving to the next spot
+  // const player = new Player()
 
-  //function to make the dice roll
+  // function to make the dice roll
   window.rollDice =()=> {
     const max = 6
     const roll = Math.ceil(Math.random() * max)
     console.log(roll)
   }
-  // const player =[{
-  //   name:'Gessica'
-  // }]
+  //   //Rolling the dice
+  //   if (state === roll){
+  //     player.rollDice()
+  //     rolls[i]++
+  //     player.showPreview()
+  //     state = move
+  //   } else (state === move)
+  //   player.move ()
+  // })
+  // //function to make the dice roll
+  // window.rollDice =()=> {
+  //   const max = 6
+  //   const roll = Math.ceil(Math.random() * max)
+  //   console.log(roll)
+  // }
 
   //to make the board
   const width = 6
@@ -38,8 +54,9 @@ document.addEventListener( 'DOMContentLoaded', () =>{
         boardHTML += `<div class = square style= 'top:${square.y*boardSizeConst}px; left:${square.x* boardSizeConst}px; background-color:${square.color}'></div>`
       })
     })
-    document.getElementById('board').innerHtml =boardHTML
+    document.getElementById('board').innerHTML =boardHTML
     console.log('render board')
   }
   renderBoard()
+
 })
