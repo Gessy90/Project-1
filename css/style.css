@@ -1,57 +1,49 @@
 h1 {
   color: red;
-text-align: center;}
-/* body{
-  width: 50%;
-  margin: auto;
-  height: 100vh;
-} */
+  text-align: center;}
 
-
-.game {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  grid-row-gap: 50px;
-  grid-column-gap: 10px;
-  background-color: green;
-  padding: 50px;
-  margin: 50px 200px;
-}
-
-.game > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-/* .game{
- display:flex;
-  background:green;
-  width: 500px;
-  height: 500px;
+  .game {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+    background-color: green;
+    padding: 50px;
+    margin: 50px 200px;
   }
- .box{
-  flex-wrap: wrap;
-}
-.first,.third,.fifth {
-  float:left;
-    width:20%;
-}
-.second,.fourth{
-  float:right;
- width:20%;
-} */
+
+  .game > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
   button{
     background-color: red;
-
+    margin-left: 200px;
   }
-   /* .player{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1px solid;
-    background-color: black;
-  }  */
+  #player{
+    background-color:white ;
+    padding: 20px 0;
+  }
+
+  #snake{
+    background-color: orange;
+    padding: 20px 0;
+  }
+
+  #ladder{
+    background-color: pink;
+    padding: 20px 0;
+  }
+
+
+
+
+
+
+
+
+
   /*# sourceMappingURL=style.css.map */
