@@ -1,13 +1,11 @@
 document.addEventListener( 'DOMContentLoaded', () =>{
   const h1 = document.querySelector('h1')
   const button = document.querySelector('button')
-  h1.textContent ='Snake and Ladder!'
+  h1.textContent ='Snails and Ladders!'
 
   button.addEventListener('click', rollDice)
   // const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
   // const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
-
-
 
 
   // function isEven(n) {
@@ -24,17 +22,19 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
     squares[currentPosition].classList.remove('currentPosition')
     currentPosition = currentPosition + roll
+
+    // ---> Check all the ladders and see if the currentPosition is the start of any ladders
+    ladsnakes.forEach( ladsnakes => {
+      if (ladsnakes.start === currentPosition) {
+        console.log('SNAKE OR LADDER')
+        currentPosition = ladsnakes.end
+      }
+    })
+
     console.log(roll, currentPosition)
     squares[currentPosition].classList.add('currentPosition')
 
-    // ---> Check all the ladders and see if the currentPosition is the start of any ladders
-
-    if (ladsnakes.start === currentPosition) {
-      currentPosition = ladsnakes.end
-    }
-
-
-    if (currentPosition > 99) {
+    if (currentPosition > 24) {
       alert(currentPosition + ' has won!')
       currentPosition = true
     }
@@ -55,7 +55,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
 
 
-  const ladsnakes = [{ start: 2, end: 8 }, { start: 12, end: 18 } , {start: 14, end: 15 } , { start: 23, end: 24 }]
+  const ladsnakes = [{ start: 3, end: 8 }, { start: 12, end: 18 } , {start: 14, end: 15 } , { start: 23, end: 24 }]
 
 
   // ladders.forEach(ladder => {

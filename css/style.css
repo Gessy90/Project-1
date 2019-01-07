@@ -9,7 +9,7 @@ h1 {
     grid-column-gap: 10px;
     background-color: green;
     padding: 50px;
-    margin: 50px 200px;
+    margin: 20px 200px;
   }
 
 
@@ -26,26 +26,20 @@ h1 {
     margin-left: 200px;
   }
 
-  #snake{
-    background-color: orange;
-    padding: 20px 0;
-  }
-
-  #ladder{
-    background-color: pink;
-    padding: 20px 0;
-  }
-  #counter{
-    background-color: red;
-  }
-
   .currentPosition {
     background-color: blue;
   }
+.squares.snake{
+  background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+ }
 
-
-
-
+.squares.ladder{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmVgMHsxSk8jpYtHRvNnq_LkngAVOtLDxdkOUsygGfSckdp-f");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 
 
