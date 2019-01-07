@@ -4,8 +4,8 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   h1.textContent ='Snails and Ladders!'
 
   button.addEventListener('click', rollDice)
-  // const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
-  // const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
+  const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
+  const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
 
 
   // function isEven(n) {
@@ -51,7 +51,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const squares = document.querySelectorAll('.squares')
 
 
-  // let currentPlayer = player
+  let currentPlayer = player
 
 
 
