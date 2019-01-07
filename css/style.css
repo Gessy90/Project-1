@@ -12,20 +12,18 @@ h1 {
     margin: 50px 200px;
   }
 
-  .game > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
+
+  .squares {
+     background-color: rgba(255, 255, 255, 0.8);
+     text-align: center;
+     padding: 20px 0;
+     font-size: 30px;
+
   }
 
   button{
     background-color: red;
     margin-left: 200px;
-  }
-  #player{
-    background-color:white ;
-    padding: 20px 0;
   }
 
   #snake{
@@ -37,8 +35,13 @@ h1 {
     background-color: pink;
     padding: 20px 0;
   }
+  #counter{
+    background-color: red;
+  }
 
-
+  .currentPosition {
+    background-color: blue;
+  }
 
 
 

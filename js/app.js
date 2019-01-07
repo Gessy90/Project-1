@@ -1,77 +1,72 @@
 document.addEventListener( 'DOMContentLoaded', () =>{
   const h1 = document.querySelector('h1')
+  const button = document.querySelector('button')
   h1.textContent ='Snake and Ladder!'
 
+  button.addEventListener('click', rollDice)
+  const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
+  const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
 
-  // function to make the dice roll
-  window.rollDice =()=> {
+
+
+
+  // function isEven(n) {
+  //   return n % 2 === 0
+  // }
+  // function isOdd(n){
+  //   return isEven(Number(n) + 1)
+  // }
+
+
+  function rollDice () {
     const max = 6
     const roll = Math.ceil(Math.random() * max)
-    console.log(roll)
+
+    squares[currentPosition].classList.remove('currentPosition')
+    currentPosition = currentPosition + roll
+    console.log(roll, currentPosition)
+    squares[currentPosition].classList.add('currentPosition')
+
+    // ---> Check all the ladders and see if the currentPosition is the start of any ladders
+
+    if (ladsnakes.start === currentPosition) {
+      currentPosition = ladsnakes.end
+    }
+
+
+    if (currentPosition > 99) {
+      alert(currentPosition + ' has won!')
+      currentPosition = true
+    }
+
+    // if (currentPlayer === player) {
+    //   currentPlayer = player2
+    // } else {
+    //   currentPlayer = player2
+    // }
   }
 
-  // const roll = 0 //Rolling the dice
-  // const move = 1 //Moving to the next spot
-  // const player = new Player()
 
-  
-  // //to make the board
-  // const width = 6
-  // const height = 6
-  // const board = []
-  // // loop through the width
-  // for (var y=0; y< height; y++){
-  //   const row = []
-  //   board.push(row)
-  //   //loop through the height
-  //   for(var x= 0; x < width; x++){
-  //     row.push({x,y,occupied: null })
+  let currentPosition = 0
+  const squares = document.querySelectorAll('.squares')
+
+
+  // let currentPlayer = player
+
+
+
+  const ladsnakes = [{ start: 2, end: 8 }, { start: 12, end: 18 } , {start: 14, end: 15 } , { start: 23, end: 24 }]
+
+
+  // ladders.forEach(ladder => {
+  //   if (ladder.start === currentPlayer.position) {
+  //     currentPlayer.position = ladder.end
   //   }
+  // })
+  //
+  //
+  // if (currentPlayer.position > 99) {
+  //   alert(currentPlayer.name + ' has won!')
+  //   currentPlayer.hasWon = true
   // }
-  // console.log(board)
-  // const boardSizeConst= 50
-  // //function to render the board
-  // const renderBoard = ()=>{
-  //   //loop throught the board and get things to the web page
-  //   let boardHTML = ''
-  //   board.forEach(row =>{
-  //     row.forEach(square =>{
-  //       //for each square add a boardHTML
-  //       boardHTML += `<div class = square style= 'top:${square.y*boardSizeConst}px; left:${square.x* boardSizeConst}px; background-color:${square.color}'></div>`
-  //     })
-  //   })
-  //   document.getElementById('board').innerHTML =boardHTML
-  //   console.log('render board')
-  // }
-  // renderBoard()
-
-// let currentPlayer = player[currentPlayerTurn]
-//
-//   currentPlayer.position = 0
-//   if(currentPlayer.position === 0 && roll !== 1){ //the first turn has to have 1
-//     console.log('Bad luck!')
-//   }else{
-//     currentPlayer.position += roll
-//
-//     //if the curretPlayer has the last position
-//     if (currentPlayer.position > 100) {
-//       console.log(currentPlayer.name +' has won!')
-//       hasWon = true //hasWon is true = player wins
-//     }
-//
-//   }
-//   //if the player has won or not
-//   let hasWon = false
-//   window.rollDice = () => {
-//     if (hasWon) {
-//       return
-//     }
-
-// players.forEach(player => {
-//     let square = null;
-//     board.forEach(row => {
-//       row.forEach(square => {
-//         if (square.position === player.position) {
-//           boardOnScreen += `<div class=player style="top:${square.y * boardSize +5}px; left:${square.x * boardSize +5}px;background-color:${player.color}"></div>`
-//         }
 })
