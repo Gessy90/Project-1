@@ -4,8 +4,8 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   h1.textContent ='Snake and Ladder!'
 
   button.addEventListener('click', rollDice)
-  const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
-  const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
+  // const player = { name: 'Player', position: 0, color: 'white' , hasWon: false}
+  // const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
 
 
 
