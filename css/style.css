@@ -14,10 +14,10 @@ h1 {
 
 
   .squares {
-     background-color: rgba(255, 255, 255, 0.8);
-     text-align: center;
-     padding: 20px 0;
-     font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
 
   }
 
@@ -28,19 +28,30 @@ h1 {
 
   .currentPosition {
     background-color: blue;
-  }
-.squares.snake{
-  background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
-   background-size: contain;
-   background-repeat: no-repeat;
- }
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 100%;
 
-.squares.ladder{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmVgMHsxSk8jpYtHRvNnq_LkngAVOtLDxdkOUsygGfSckdp-f");
-  background-size: contain;
-  background-repeat: no-repeat;
+
+  }
+  .squares.snake{
+    background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .squares.ladder{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmVgMHsxSk8jpYtHRvNnq_LkngAVOtLDxdkOUsygGfSckdp-f");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+player{
+  //player
 }
 
-
-
+player2{
+  //computer
+}
   /*# sourceMappingURL=style.css.map */

@@ -8,14 +8,6 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const player2 = { name: 'Computer', position: 0, color: 'orange' , hasWon: false}
 
 
-  // function isEven(n) {
-  //   return n % 2 === 0
-  // }
-  // function isOdd(n){
-  //   return isEven(Number(n) + 1)
-  // }
-
-
   function rollDice () {
     const max = 6
     const roll = Math.ceil(Math.random() * max)
@@ -39,34 +31,18 @@ document.addEventListener( 'DOMContentLoaded', () =>{
       currentPosition = true
     }
 
-    // if (currentPlayer === player) {
-    //   currentPlayer = player2
-    // } else {
-    //   currentPlayer = player2
-    // }
+    if (currentPlayer === player) {
+      currentPlayer = player2
+    } else {
+      currentPlayer = player2
+    }
   }
-
 
   let currentPosition = 0
   const squares = document.querySelectorAll('.squares')
 
-
   let currentPlayer = player
-
-
 
   const ladsnakes = [{ start: 3, end: 8 }, { start: 12, end: 18 } , {start: 14, end: 15 } , { start: 23, end: 24 }]
 
-
-  // ladders.forEach(ladder => {
-  //   if (ladder.start === currentPlayer.position) {
-  //     currentPlayer.position = ladder.end
-  //   }
-  // })
-  //
-  //
-  // if (currentPlayer.position > 99) {
-  //   alert(currentPlayer.name + ' has won!')
-  //   currentPlayer.hasWon = true
-  // }
 })
