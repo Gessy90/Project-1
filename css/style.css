@@ -7,9 +7,12 @@ h1 {
     grid-template-columns: auto auto auto auto auto;
     grid-row-gap: 50px;
     grid-column-gap: 10px;
-    background-color: green;
     padding: 50px;
     margin: 20px 200px;
+    background-color: green;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-image: url("https://gide.myglife.org/file/TaylorG4044-OrionContent/GameDesign/images/MW_Background.gif"); */
   }
 
 
@@ -18,23 +21,22 @@ h1 {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-
   }
   .instruction{
-  
+
   }
   button{
     background-color: red;
     margin-left: 500px;
   }
 
-  .currentPosition {
+  /* .currentPosition {
     background-color: blue;
     width: 80px;
     height: 80px;
     background: red;
     border-radius: 100%;
-  }
+  } */
   .squares.snake{
     background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
     background-size: contain;
@@ -47,7 +49,7 @@ h1 {
     background-repeat: no-repeat;
   }
 
-.player{
+.player1{
   background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");");
 }
 
