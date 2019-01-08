@@ -53,18 +53,18 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     })
     console.log(roll)
     console.log(player1position, player2position)
-    if (player1position >= 24 || player2position >= 24) winConditions()
+    if (player1position >= 38 || player2position >= 38) winConditions()
   }
 
   // function that checks to see whether a player has won every time they role.
   function winConditions() {
-    if (player1position < 24) {
+    if (player1position < 38) {
       squares[player1position].classList.add('currentPosition')
     } else {
-      (player1position === 24)
+      (player1position === 38)
       return alert('Player 1 is the winner')
     }
-    (player2position === 24)
+    (player2position === 38)
     return alert('Player 2 is the winner')
   }
 

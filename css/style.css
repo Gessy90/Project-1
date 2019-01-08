@@ -4,7 +4,7 @@ h1 {
 
   .game {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
     grid-row-gap: 50px;
     grid-column-gap: 10px;
     padding: 50px;
@@ -23,7 +23,7 @@ h1 {
     font-size: 30px;
   }
   .instruction{
-
+//put it on the right side//
   }
   button{
     background-color: red;
@@ -49,11 +49,11 @@ h1 {
     background-repeat: no-repeat;
   }
 
-.player1{
+.player1position{
   background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");");
 }
 
-.player2{
+.player2position{
   background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
 }
   /*# sourceMappingURL=style.css.map */
