@@ -20,10 +20,12 @@ h1 {
     font-size: 30px;
 
   }
-
+  .instruction{
+  
+  }
   button{
     background-color: red;
-    margin-left: 200px;
+    margin-left: 500px;
   }
 
   .currentPosition {
