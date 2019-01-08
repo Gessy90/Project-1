@@ -46,3 +46,5 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const ladsnakes = [{ start: 3, end: 8 }, { start: 12, end: 18 } , {start: 14, end: 15 } , { start: 23, end: 24 }]
 
 })
+//when touches snails needs to go back 1 square.
+//when touches ladder needs to shoot up down and lands it on the space next to it.

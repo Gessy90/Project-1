@@ -32,8 +32,6 @@ h1 {
     height: 80px;
     background: red;
     border-radius: 100%;
-
-
   }
   .squares.snake{
     background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
@@ -47,11 +45,11 @@ h1 {
     background-repeat: no-repeat;
   }
 
-player{
-  //player
+.player{
+  background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");");
 }
 
-player2{
-  //computer
+.player2{
+  background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
 }
   /*# sourceMappingURL=style.css.map */
