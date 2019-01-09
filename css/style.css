@@ -40,6 +40,7 @@ button{
   height: 50px;
   font-size: 20px;
   align-items: center;
+    margin-top: 20px;
 }
 #reset{
   display: flex;
