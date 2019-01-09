@@ -20,7 +20,6 @@ h1 {
 .squares {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   height: 100px;
   width: calc(100%/7);
   background-color: rgba(255, 255, 255, 0.8);
@@ -30,11 +29,10 @@ h1 {
 .instruction{
   display: flex;
   float:right;
-  top: 80px;
-  right: 0;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 200px;
   border:2px solid;
+  justify-content: center;
 }
 button{
   display: flex;
@@ -72,12 +70,12 @@ button{
   background-size: cover;
 }
 
-.player1{
+.player{
   background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");
   background-size: cover;
 }
 
-.player2{
+.computer{
   background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
   background-size: cover;
 }

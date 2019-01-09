@@ -16,8 +16,8 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   let player1position = 0
   let player2position = 0
 
-  squares[player1position].classList.add('player1')
-  squares[player2position].classList.add('player2')
+  squares[player1position].classList.add('player')
+  squares[player2position].classList.add('computer')
 
   let player1turn = true
 
@@ -31,18 +31,14 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     //and afterward player1turn changes to true so that player1 can have a go again
 
 
-    squares[player1position].classList.remove('player1')
-    squares[player2position].classList.remove('player2')
-    
+    squares[player1position].classList.remove('player')
+    squares[player2position].classList.remove('computer')
+
     if (player1turn){
-
       player1position = player1position + roll
-
       player1turn = false
     } else {
-
       player2position = player2position + roll
-
       player1turn = true
     }
 
@@ -61,33 +57,35 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
     })
 
-    squares[player1position].classList.add('player1')
-    squares[player2position].classList.add('player2')
+    squares[player1position].classList.add('player')
+    squares[player2position].classList.add('computer')
 
     console.log(roll)
     console.log(player1position, player2position)
-    if (player1position >= 38 || player2position >= 38) winConditions()
+    if (player1position >= 40 || player2position >= 40) winConditions()
   }
 
   // function that checks to see whether a player has won every time they role.
   function winConditions() {
-    if (player1position < 38) {
+    if (player1position < 40) {
       squares[player1position].classList.add('currentPosition')
     } else {
-      (player1position === 38)
-      return alert('Player 1 is the winner')
+      (player1position === 40)
+      return alert('Player is the winner')
     }
-    (player2position === 38)
-    return alert('Player 2 is the winner')
+    (player2position === 40)
+    return alert('Computer is the winner')
   }
 
 
 
   function theEnd() {
-    squares[player1position].classList.remove('player1')
+    squares[player1position].classList.remove('player')
     player1position = 0
-    squares[player2position].classList.remove('player2')
+    squares[player2position].classList.remove('computer')
     player2position = 0
   }
 
 })
+// sometimes player 1 doesn't always move when he lands on a ladder
+//go backward when touches the Snails
