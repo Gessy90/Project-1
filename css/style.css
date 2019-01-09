@@ -10,8 +10,8 @@ h1 {
     padding: 50px;
     margin: 20px 200px;
     background-color: green;
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
     /* background-image: url("https://gide.myglife.org/file/TaylorG4044-OrionContent/GameDesign/images/MW_Background.gif"); */
   }
 
@@ -30,6 +30,15 @@ h1 {
     margin-left: 500px;
   }
 
+  #dice{
+  	width:32px;
+  	background:#F5F5F5;
+  	border:1px solid;
+  	padding:10px;
+  	font-size:24px;
+  	text-align:center;
+  	margin-left: :500px;
+  }
   /* .currentPosition {
     background-color: blue;
     width: 80px;
@@ -39,21 +48,21 @@ h1 {
   } */
   .squares.snake{
     background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-size: cover;
   }
 
   .squares.ladder{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmVgMHsxSk8jpYtHRvNnq_LkngAVOtLDxdkOUsygGfSckdp-f");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-.player1position{
-  background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");");
+.player1{
+  background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");
+  background-size: cover;
 }
 
-.player2position{
+.player2{
   background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
+  background-size: cover;
 }
   /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const h1 = document.querySelector('h1')
   const button = document.querySelector('button')
   const btnReset = document.getElementById('reset')
+  const diceSquare = document.getElementById('dice')
 
   h1.textContent ='Snails and Ladders!'
 
@@ -18,10 +19,27 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   squares[player2position].classList.add('player2')
 
   let player1turn = true
+  //make actual dice roll
+  const dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;']
+  // let stop = true
+  // let t
+
+
+  // function stopstart() {
+  //   if(stopped) {
+  //     stopped = false
+  //     t = setInterval(change, 100)
+  //   } else {
+  //     clearInterval(t)
+  //     stopped = true
+  //   }
+  // }
 
   function rollDice () {
     const max = 6
     const roll = Math.ceil(Math.random() * max)
+    diceSquare.innerHTML = dices[roll-1]
+
     // const currentPlayerPostion = player1turn ? player1position : player2position
 
     //both players start at 0 and player1 is true so change it to false so that player2 can have a go also
@@ -32,9 +50,9 @@ document.addEventListener( 'DOMContentLoaded', () =>{
       squares[player1position].classList.add('player1')
       player1turn = false
     } else {
-      squares[player1position].classList.remove('player2')
+      squares[player2position].classList.remove('player2')
       player2position = player2position + roll
-      squares[player1position].classList.add('player2')
+      squares[player2position].classList.add('player2')
       player1turn = true
     }
 
@@ -67,6 +85,8 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     (player2position === 38)
     return alert('Player 2 is the winner')
   }
+
+
 
   function theEnd() {
     squares[player1position].classList.remove('player1')
