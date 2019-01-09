@@ -1,26 +1,24 @@
 h1 {
   color: red;
-  text-align: center;}
+  text-align: center;
+
+}
 
   .game {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto ;
-    grid-row-gap: 10px;
-    grid-column-gap: 5px;
-    padding: 20px;
-    margin: 20px 400px;
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(0, 102, 0);
-    /* background-size: contain; */
-    /* background-repeat: no-repeat; */
-    /* background-image: url("https://gide.myglife.org/file/TaylorG4044-OrionContent/GameDesign/images/MW_Background.gif"); */
+    padding:40px;
+
   }
-
-
   .squares {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    height: 100px;
+    width: calc(100%/7);
     background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
+    border: 2px solid;
   }
   .instruction{
     position:absolute;
@@ -37,21 +35,18 @@ h1 {
     background-color: rgb(153, 51, 102);
   }
   #dice{
-    width:32px;
-    background-color: red;
-    border:1px solid;
+    /* width:40px; */
+    /* background-color: red
+    /* border:1px solid; */
     padding:10px;
-    font-size:24px;
-    text-align:center;
-    margin-left: :500px;
+    font-size: 150px;
+    /* position: absolute; */
+    top: 80px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
   }
-  /* .currentPosition {
-  background-color: blue;
-  width: 80px;
-  height: 80px;
-  background: red;
-  border-radius: 100%;
-  } */
+  
   .squares.snake{
     background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
     background-size: cover;
