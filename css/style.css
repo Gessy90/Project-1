@@ -4,12 +4,12 @@ h1 {
 
   .game {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-row-gap: 50px;
-    grid-column-gap: 10px;
-    padding: 50px;
-    margin: 20px 200px;
-    background-color: green;
+    grid-template-columns: auto auto auto auto auto auto ;
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+    padding: 20px;
+    margin: 20px 400px;
+    background-color: rgb(0, 102, 0);
     /* background-size: contain; */
     /* background-repeat: no-repeat; */
     /* background-image: url("https://gide.myglife.org/file/TaylorG4044-OrionContent/GameDesign/images/MW_Background.gif"); */
@@ -23,32 +23,34 @@ h1 {
     font-size: 30px;
   }
   .instruction{
-//put it on the right side//
+    //put it on the right side//
   }
   button{
-    background-color: red;
+    background-color: rgb(0, 0, 255);
     margin-left: 500px;
   }
-
+  #reset{
+    background-color: rgb(153, 51, 102);
+  }
   #dice{
-  	width:32px;
-  	background:#F5F5F5;
-  	border:1px solid;
-  	padding:10px;
-  	font-size:24px;
-  	text-align:center;
-  	margin-left: :500px;
+    width:32px;
+    background-color: red;
+    border:1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin-left: :500px;
   }
   /* .currentPosition {
-    background-color: blue;
-    width: 80px;
-    height: 80px;
-    background: red;
-    border-radius: 100%;
+  background-color: blue;
+  width: 80px;
+  height: 80px;
+  background: red;
+  border-radius: 100%;
   } */
   .squares.snake{
     background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
-  background-size: cover;
+    background-size: cover;
   }
 
   .squares.ladder{
@@ -56,13 +58,13 @@ h1 {
     background-size: cover;
   }
 
-.player1{
-  background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");
-  background-size: cover;
-}
+  .player1{
+    background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");
+    background-size: cover;
+  }
 
-.player2{
-  background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
-  background-size: cover;
-}
+  .player2{
+    background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
+    background-size: cover;
+  }
   /*# sourceMappingURL=style.css.map */
