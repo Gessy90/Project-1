@@ -29,15 +29,20 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
     //both players start at 0 and player1 is true so change it to false so that player2 can have a go also
     //and afterward player1turn changes to true so that player1 can have a go again
+
+
+    squares[player1position].classList.remove('player1')
+    squares[player2position].classList.remove('player2')
+    
     if (player1turn){
-      squares[player1position].classList.remove('player1')
+
       player1position = player1position + roll
-      squares[player1position].classList.add('player1')
+
       player1turn = false
     } else {
-      squares[player2position].classList.remove('player2')
+
       player2position = player2position + roll
-      squares[player2position].classList.add('player2')
+
       player1turn = true
     }
 
@@ -55,6 +60,9 @@ document.addEventListener( 'DOMContentLoaded', () =>{
       }
 
     })
+
+    squares[player1position].classList.add('player1')
+    squares[player2position].classList.add('player2')
 
     console.log(roll)
     console.log(player1position, player2position)

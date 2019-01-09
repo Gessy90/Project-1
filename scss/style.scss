@@ -1,21 +1,10 @@
-// $color: red;
-//
-// h1{
-//   color:$color;
-// }
-// .game{
-//   width: 60%;
-//   margin: auto;
-//   height: 100vh;
-// }
-// button{
-//   color:$color;
-// }
-// #player{
-//   position: absolute;
-//   height: 40px;
-//   width: 40px;
-//   border-radius: 50%;
-//   border: 1px solid;
-//   background-color: black;
-// }
+*{
+  box-sizing: border-box;
+}
+
+
+$color: red;
+
+h1{
+  color:$color;
+}
