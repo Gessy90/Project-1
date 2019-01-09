@@ -27,37 +27,29 @@ h1 {
   transition: background-image 1s, background 1s;
 }
 .instruction{
-  display: flex;
-  float:right;
-  width: 500px;
+  width: 200px;
   height: 200px;
-  border:2px solid;
+  margin-left:-100px;
   justify-content: center;
+  flex-direction: column;
 }
 button{
-  display: flex;
-  float:right;
   background-color: rgb(0, 0, 255);
   border: 1px solid;
+  width:100px;
+  height: 50px;
+  font-size: 20px;
+  align-items: center;
 }
 #reset{
   display: flex;
-  float: right;
   background-color: rgb(153, 51, 102);
+  margin-top: 10px;
 }
 #dice{
   display: flex;
-  float: left;
-  width:40px;
-  background-color: red
-  border:1px solid;
-  padding:10px;
-  /* font-size: 150px; */
-  /* position: absolute; */
-  top: 80px;
-  right: 500px;
-  width: 500px;
-  height: 500px;
+  /* border:1px solid; */
+  font-size: 150px;
 }
 
 .snake{

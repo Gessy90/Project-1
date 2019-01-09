@@ -89,3 +89,5 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 })
 // sometimes player 1 doesn't always move when he lands on a ladder
 //go backward when touches the Snails
+//when playing for the second time there is a problem with the button rollDice
+//when i reset the game the big dice doesn't disappear but it should
