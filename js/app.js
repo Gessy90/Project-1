@@ -10,6 +10,8 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const musicButton = document.querySelector('.btn1')
   const sound = document.querySelector('#sound')
 
+  h1.textContent ='Snails and Tunnels'
+
   musicButton.addEventListener('click', (e) => {
     console.log('playing')
     sound.setAttribute('src','sound/shake.wav')
@@ -17,7 +19,6 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   })
 
 
-  h1.textContent ='Snails and Tunnels.'
 
   button.addEventListener('click', waitThenRoll)
   btnReset.addEventListener('click', theEnd)
@@ -108,3 +109,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   }
 
 })
+//1. I would like to distinguish the entrance and the exit of the tunnel by putting a different image or animation(fading)
+//2. When both player and computer are on the same square I would like them both to be visible instead of just one.
+//3. Mobile responsive
+//4. Add more levels with more square and multiple players.

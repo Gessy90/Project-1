@@ -32,7 +32,6 @@ p{
   display: flex;
   flex-wrap: wrap;
   float:left;
-  /* background-color: rgb(0, 102, 0); */
   padding:20px;
   margin: 200px;
   margin-top: 20px;
@@ -96,5 +95,3 @@ button{
   background: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
   background-size: cover;
 }
-
-/*# sourceMappingURL=style.css.map */
