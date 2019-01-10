@@ -1,7 +1,7 @@
 document.addEventListener( 'DOMContentLoaded', () =>{
   const squares = document.querySelectorAll('.squares')
 
-  const ladsnakes = [{ start: 2, end: 7 }, { start: 12, end: 19 } , {start: 29, end: 34 } , { start: 9, end: 8 } , { start: 17, end: 16 }, { start: 22, end: 21 } , {start: 24, end: 23 }, { start: 32, end: 31 } , {start: 39, end: 38 }]
+  const ladsnakes = [{ start: 5, end: 10 }, { start: 12, end: 19 } , {start: 29, end: 34 } , { start: 8, end: 7 } , { start: 17, end: 16 }, { start: 22, end: 21 } , {start: 24, end: 23 }, { start: 32, end: 31 } , {start: 39, end: 38 }]
   const h1 = document.querySelector('h1')
   const button = document.querySelector('button')
   const btnReset = document.getElementById('reset')
