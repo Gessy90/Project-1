@@ -1,6 +1,14 @@
 h1 {
-  color: red;
+  color: rgb(0, 107, 12);
   text-align: center;
+  font-family: fantasy;
+}
+
+h2{
+    font-family: cursive;
+}
+p{
+
 }
 .container {
   display: flex;
@@ -11,18 +19,20 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   float:left;
-  background-color: rgb(0, 102, 0);
+  /* background-color: rgb(0, 102, 0); */
   padding:20px;
   margin: 200px;
   margin-top: 20px;
   justify-content: center;
+  background-image: url("http://www.usclimateplan.org/wp-content/uploads/2018/11/mario-style-platform-set-opengameart-org-detail-backrounds-briliant-3.png");
+  background-size: cover;
 }
-.squares {
+.squares{
   display: flex;
   flex-wrap: wrap;
   height: 100px;
   width: calc(100%/7);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border: 2px solid;
   transition: background-image 1s, background 1s;
 }
@@ -34,18 +44,20 @@ h1 {
   flex-direction: column;
 }
 button{
-  background-color: rgb(0, 0, 255);
+  background-color: rgb(0, 107, 12);
   border: 1px solid;
   width:100px;
   height: 50px;
   font-size: 20px;
   align-items: center;
-    margin-top: 20px;
+  margin-top: 20px;
 }
 #reset{
   display: flex;
-  background-color: rgb(153, 51, 102);
+  background-color:rgb(210,105,30);
   margin-top: 10px;
+  text-align: center;
+  padding-left: 20px;
 }
 #dice{
   display: flex;
@@ -59,7 +71,7 @@ button{
 }
 
 .ladder{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThmVgMHsxSk8jpYtHRvNnq_LkngAVOtLDxdkOUsygGfSckdp-f");
+  background-image: url("https://image.shutterstock.com/image-vector/railway-tunnel-icon-flat-illustration-260nw-510172156.jpg");
   background-size: cover;
 }
 

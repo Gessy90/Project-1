@@ -8,6 +8,9 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const diceSquare = document.getElementById('dice')
   const dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;']
 
+
+  const roll = 0
+
   h1.textContent ='Snails and Ladders!'
 
   button.addEventListener('click', rollDice)
@@ -24,7 +27,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
   function rollDice () {
     const max = 6
-    const roll = Math.ceil(Math.random() * max)
+    roll = Math.ceil(Math.random() * max)
     diceSquare.innerHTML = dices[roll-1]
 
     //both players start at 0 and player1 is true so change it to false so that player2 can have a go also
@@ -64,6 +67,19 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     console.log(player1position, player2position)
     if (player1position >= 40 || player2position >= 40) winConditions()
   }
+//function to set interval so that i can see all the players moves
+
+let time remaining = 5
+
+const timerId = setInterval(() => {
+    div.classList.remove('player')
+    console.log(timeRemaining)
+    div = divs[Math.floor(Math.random() * divs.length)]
+    div.classList.add('player')
+    if(timeRemaining === 0) clearInterval(timerId)
+  }, 1000)
+
+
 
   // function that checks to see whether a player has won every time they role.
   function winConditions() {
