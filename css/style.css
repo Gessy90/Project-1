@@ -1,14 +1,23 @@
+body{
+  background-color: rgb(0, 199, 139);
+}
+
+
 h1 {
-  color: rgb(0, 107, 12);
+  color: rgb(189, 28, 0);
   text-align: center;
   font-family: fantasy;
+  font-size: 50px;
 }
 
 h2{
-    font-family: cursive;
+  font-family: cursive;
+  color: white;
+  font-size: 35px;
 }
 p{
-
+  color: white;
+  font-size: 20px;
 }
 .container {
   display: flex;
@@ -34,7 +43,7 @@ p{
   width: calc(100%/7);
   background-color: rgba(255, 255, 255, 0.9);
   border: 2px solid;
-  transition: background-image 1s, background 1s;
+  transition: background 1s;
 }
 .instruction{
   width: 200px;
@@ -44,7 +53,7 @@ p{
   flex-direction: column;
 }
 button{
-  background-color: rgb(0, 107, 12);
+  background-color: rgb(219, 197, 0);
   border: 1px solid;
   width:100px;
   height: 50px;
@@ -66,22 +75,22 @@ button{
 }
 
 .snake{
-  background-image: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
+  background: url("https://previews.123rf.com/images/irwanjos/irwanjos1508/irwanjos150800007/43828813-cute-snail-cartoon.jpg");
   background-size: cover;
 }
 
 .ladder{
-  background-image: url("https://image.shutterstock.com/image-vector/railway-tunnel-icon-flat-illustration-260nw-510172156.jpg");
+  background: url("https://image.shutterstock.com/image-vector/railway-tunnel-icon-flat-illustration-260nw-510172156.jpg");
   background-size: cover;
 }
 
 .player{
-  background-image: url("https://www.wikihow.com/images/6/61/Draw-a-Cartoon-Man-Step-15.jpg");
+  background: url("https://st3.depositphotos.com/6633222/16437/v/1600/depositphotos_164377512-stock-illustration-cute-little-boy-cartoon.jpg");
   background-size: cover;
 }
 
 .computer{
-  background-image: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
+  background: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
   background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
