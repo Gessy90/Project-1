@@ -7,6 +7,14 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   const btnReset = document.getElementById('reset')
   const diceSquare = document.getElementById('dice')
   const dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;']
+  const musicButton = document.querySelector('.btn1')
+  const sound = document.querySelector('#sound')
+
+  musicButton.addEventListener('click', (e) => {
+    console.log('playing')
+    sound.setAttribute('src','sound/shake.wav')
+    sound.play()
+  })
 
 
   h1.textContent ='Snails and Tunnels.'
@@ -74,21 +82,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     console.log(player1position, player2position)
     // if (player1position >= 41 || player2position >= 41) winConditions()
   }
-  //function to set interval so that i can see all the players moves
 
-  // const setTimeOut = 5
-  //
-  // function randomTime(min,max){
-  //   return Math.round(Math.random()* (min-max)+ min)
-  // }
-  //
-  // function jump(){
-  //   const time =randomTime(200,1000)
-  //   squares[player1position].classList.add('player')
-  //   setTimeOut(() =>{
-  //     squares[player1position].classList.remove('player')
-  //   })
-  // }
 
 
   // function that checks to see whether a player has won every time they role.
@@ -106,7 +100,6 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   }
 
 
-
   function theEnd() {
     squares[player1position].classList.remove('player')
     player1position = 0
@@ -115,7 +108,3 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   }
 
 })
-// sometimes player 1 doesn't always move when he lands on a ladder
-//go backward when touches the Snails
-//when playing for the second time there is a problem with the button rollDice
-//when i reset the game the big dice doesn't disappear but it should

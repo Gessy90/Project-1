@@ -13,10 +13,11 @@
   <script src="js/app.js" charset="utf-8"></script>
 </head>
 <body>
+  <audio id='sound' src=''></audio>
   <h1>Snails and Tunnels</h1>
   <div class="container">
     <div class="game">
-      <div class="squares">start</div>
+      <div class="squares"><h3>Start</h3></div>
       <div class="squares">1</div>
       <div class="squares ladder">2</div>
       <div class="squares">3</div>
@@ -57,7 +58,7 @@
       <div class="squares">38</div>
       <div class="squares snake">39</div>
       <div class="squares">40</div>
-      <div class="squares">41</div>
+      <div class="squares"><h3>End</h3></div>
     </div>
     <div class="instruction">
       <h2>Instructions:</h2>
@@ -65,7 +66,7 @@
       <p>-Avoid the snail or you will go back one square.</p>
       <p>-Try to go through the tunnel for quick progress.</p>
       <p>-Make your way up to 41.</p>
-      <button>ROLL DICE</button>
+      <button class='btn1'>ROLL DICE</button>
       <button id="reset">RESET</button>
       <div id="dice"></div>
      </div>

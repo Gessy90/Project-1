@@ -15,6 +15,10 @@ h2{
   color: white;
   font-size: 35px;
 }
+h3{
+  color:blue;
+  font-size: 50px;
+}
 p{
   color: white;
   font-size: 20px;
@@ -70,7 +74,6 @@ button{
 }
 #dice{
   display: flex;
-  /* border:1px solid; */
   font-size: 150px;
 }
 
@@ -93,4 +96,5 @@ button{
   background: url("https://www.colourbox.com/preview/5188575-computer-cartoon.jpg");
   background-size: cover;
 }
+
 /*# sourceMappingURL=style.css.map */
