@@ -19,7 +19,6 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   })
 
 
-
   button.addEventListener('click', waitThenRoll)
   btnReset.addEventListener('click', theEnd)
 
@@ -30,7 +29,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   squares[player2position].classList.add('computer')
 
   let player1turn = true
-
+  //------------ FUNCTION THAT GIVES US AN INTERVAL SO THAT THE DICE THATS 1 SEC TO APPEAR-----
   function waitThenRoll(){
     diceSquare.innerHTML = ''
     setTimeout(() =>{
@@ -38,18 +37,17 @@ document.addEventListener( 'DOMContentLoaded', () =>{
     }, 1000)
   }
 
-
+  //---------------- FUNCTION TO MAKE THE DICE ROLL RANDOMLY  -------
   function rollDice () {
     const max = 6
     const roll = Math.ceil(Math.random() * max)
     diceSquare.innerHTML = dices[roll-1]
 
-    //both players start at 0 and player1 is true so change it to false so that player2 can have a go also
-    //and afterward player1turn changes to true so that player1 can have a go again
-
 
     squares[player1position].classList.remove('player')
     squares[player2position].classList.remove('computer')
+    //------ PLAYER1 HAS A GO FIRST AND WITH THIS IF/ELSE STATEMENT BOTH PLAYERS HAVE A POSITION
+    // THAN THE DICE ROLLS AND CHECKS THE WIN CONDITIONS
 
     if (player1turn){
       player1position = player1position + roll
@@ -63,7 +61,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
     console.log(squares[player1position])
 
-    // ---> Check all the ladders and see if the currentPosition is the start of any ladders
+    // ---> CHECK ALL THE LADDERS AND SEE IF THE CURRENT POSITION IS THE START OF ANY LADDERS
     ladsnakes.forEach( ladsnakes => {
       if (ladsnakes.start === player1position) {
         console.log('SNAKE OR LADDER')
@@ -81,12 +79,11 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
     console.log(roll)
     console.log(player1position, player2position)
-    // if (player1position >= 41 || player2position >= 41) winConditions()
   }
 
 
 
-  // function that checks to see whether a player has won every time they role.
+  // FUNCTION THAT CHECKS TO SEE WHETHER A PLAYER HAS WON EVERY TIME THEY ROLE
   function winConditions() {
     if (player1position >= 41) {
       player1position = 41
@@ -97,10 +94,9 @@ document.addEventListener( 'DOMContentLoaded', () =>{
       theEnd()
       return alert('Computer is the winner')
     }
-
   }
 
-
+  //FUNCTION THAT RESETS THE GAME
   function theEnd() {
     squares[player1position].classList.remove('player')
     player1position = 0
@@ -109,7 +105,3 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   }
 
 })
-//1. I would like to distinguish the entrance and the exit of the tunnel by putting a different image or animation(fading)
-//2. When both player and computer are on the same square I would like them both to be visible instead of just one.
-//3. Mobile responsive
-//4. Add more levels with more square and multiple players.
