@@ -19,7 +19,6 @@
 
 ![snails and tunnels](https://media.git.generalassemb.ly/user/17645/files/fe213900-1583-11e9-8dfd-afbbcccebfee)
 
-
 You can find a hosted version here ----> [gessy90.github.io/Project-1](https://gessy90.github.io/Project-1/)
 
 ### Game overview
@@ -31,73 +30,67 @@ The aim of the game is to navigate one's game piece, according to die rolls, fro
 ### Game Instructions
 1. The game is started by clicking on the "ROLL DICE" button.
 
-![screenshot - Start Modal](https://user-images.githubusercontent.com/40343797/45220826-6777ff00-b2a7-11e8-8511-8a5f00bc0b74.png)
+![roll dice button](https://media.git.generalassemb.ly/user/17645/files/214ce800-1586-11e9-935f-1306ff6e3681)
 
-2. Once the game begins, there is short animation of a boat entering onto the screen and the player's submarine appears below the boat. Once the submarine appears, it can be controlled by the player using the ← ↑ → ↓ keys.
+2. Once the game begins, the dice rolls randomly. The player makes his first move according to the number that the dice produce.
 
-![screenshot - Beginning position](https://user-images.githubusercontent.com/40343797/45220870-8ececc00-b2a7-11e8-804a-c271278a428f.png)
+![player moving](https://media.git.generalassemb.ly/user/17645/files/69b8d580-1587-11e9-874e-e35f8143ab45)
 
-3. Points are gained when the submarine is moved into a fish or other marine life. This 'captures' the specimen and points are gained. The fishes are randomly spawned and each type of fish has different movement patterns. Different types of fish are spawned at different levels and at different probabilities. Generally the fish with higher score values are only spawned at the lower depths and spawned less frequently.
+3. After that by clicking on the "ROLL DICE" button the computer will have a go also.
+![computer playing](https://media.git.generalassemb.ly/user/17645/files/332f8a80-1588-11e9-879a-a63c02686dc4)
 
-![screenshot - Fish types](https://user-images.githubusercontent.com/40343797/45220971-e53c0a80-b2a7-11e8-9942-714db52793d9.png)
 
-4. If the submarine moves into an underwater mine, the mine will explode. This deducts an amount from your remaining Air Supply.
+4. If they both land on a snail they will go back 1 square.
 
-![screenshot - Mines](https://user-images.githubusercontent.com/40343797/45220908-b4f46c00-b2a7-11e8-9460-2a4dee40d0ae.png)
+![hitting the snails](https://media.git.generalassemb.ly/user/17645/files/8dc9e600-158a-11e9-955c-1da9d306926c)
 
-5. Your Air Supply is shown in the air tank on the left of the screen. You must return to the surface before the Air Supply runs out. If you do not return to the surface before your Air Supply runs out, the game will end and your points will be lost. A beeping sound and flashing Air Supply will warn you when your Air Supply is running low.
+5. If they both land on a tunnel they will be transported to the other end of the tunnel.
 
-![screenshot - End Modal Successful](https://user-images.githubusercontent.com/40343797/45221008-04d33300-b2a8-11e8-999e-62b50286c8ec.png)
+![tunnel jump](https://media.git.generalassemb.ly/user/17645/files/0c725380-158a-11e9-8f51-8de3e9c470c0)
 
 ## Process
 
-The starting point for this game was creating the basic grid layout on which the submarine could move. This was created by a list of 'div's in the HTML. Each cell within the grid was an individual element. These cells are nestled within a container. The submarine, and fish were created by applying classes to the elements within the grid. When the submarine or fish is moved, their class is removed from the cell of their current position and applied to the new cell.
+The starting point of the game was creating a basic grid layout so that the player and computer could move. This was created by a list of 'div's in the HTML. Each cell within the grid was an individual element. These cells are nestled within a container. The snails, and tunnels were created by applying classes to the elements within the grid. When the player or the computer is moved, their class is removed from the cell of their current position and applied to the new cell.
 
-I created fish as objects which contain their points value, an array of their movement patterns, their age and the class which is being applied to the cell that they are in. The class relates to a css class with a corresponding background image of the fish type. When a fish is created it is added to an array of fish in play.
+I created an array of objects which contains all the start and end of the tunnels. In the same array I've put also the snails start and end. In css I've given corresponding background images to the snails and the tunnels.
 
-While the game is running, a function runs through the array of fish in play and moves each fish the corresponding amount within their movement patterns.
+Afterward I created a class in css for the player and the computer and given them background images.
 
-A function was also created which checks if a fish has been caught. This runs through the array of fish in play to check if its location is the same as that of the submarine. If it has been caught, it is removed from the array of fish in play and its corresponding points value to added to the player's score.
+Both player and computer are at position 0 when the game starts. The player has a go first. The first things is that function waitThenRoll() is called and after 1 second the dice appear. After this, a function rollDice () is called when the computer randomly chooses a number between 1 and 6.
 
-Once I had this mechanics working, I worked on adding a timer countdown which displayed as an air supply within the player's air tank. The height of the air supply element is a proportion of the amount of time left.
+While this is going on, the player's position is moved from position 0 and is added to the right spot accordingly to the random number produced by the roll. Every time that this happens, the winConditions are constantly checked. Thanks to a boolean statement the computer has a go and its position is moved from position 0 and is added to the right spot accordingly to the random number produced by the roll again and this will go on until the end of the game.
 
-I then moved onto the task of allowing the position of the submarine to control the scrolling of the grid. This also required stoping the default behaviour of controls to prevent the user from scrolling through the grid to a position where the submarine was not visible.
 
-As the game continued to develop I created a fish constructor function which created the fish objects and also contained the method which allowed the fish to move. I had initially also created a method which allowed the fish, when they were caught or swam off screen, to be removed from the fish in played array and remove their classes from the grid. However, I later changed this to a key within the fish object which specified whether the fish was active or not. During the game, a function now runs through the array of fish in play and removes any fish which have been set to no longer active.
+With ladsnakes.forEach we check if the player and computer are on the same spot as the snails and tunnels and if they are on the same spot they both will go to the end. A classList is added to both the computer and the player so that they are back into their chosen position.
 
-The final significant element was creating a variable which specified whether the submarine was at the top of the surface when the air supply had reached zero. I created a modal with content which varied depending on whether the player had returned to the surface by the end of the game.
+The whole game ends thanks to the function theEnd() and the connected 'RESET' button so both classes are removed from the grid.
 
 ### Challenges
+The most challenging thing was that the player and computer are landing at the same time on the same square. I have resolved the problem by using css (transition: background 1s;) but still it's not the best way.
 
-This game involves quite a lot of different things going on at the same time. It was a challenge to make sure the gaming mechanics were being being timed correctly. It was also important that I created code logic that could cope with expanding numbers of different fish characters in play at the same time.
+I would've liked to make it clearer to the user that the tunnel begins on square 5 and ends on square 10.
 
-There were several tricky tasks including the scrolling of the grid being controlled by the submarine and the animation of the fish.
 
 ### Wins
-
-Creating cascading animations and sounds really helped the game come alive and gave me more creative control over the feel of the play. I invested a lot of time in the stying of the game, particularly the animations and air supply tank to give them a consistent and professional feel. I was particularly pleased with my 'Fish' constructor function which I then used to randomly generate different fish.
-
-![Fish constructor function from app.js](https://user-images.githubusercontent.com/40343797/50378462-b7968980-062a-11e9-95b7-54e358bfb320.png)
+The game works fine and I like the sound added to the dice. I also like the fact that with the function 'waitThenRoll' the dice waits one second before rolling out.
 
 
-When fish were created, they were added to an array of 'fishInPlay'. I was then able to call this function every 200 milliseconds to move every fish on the board.
+function waitThenRoll(){
+  diceSquare.innerHTML = ''
+  setTimeout(() =>{
+    rollDice()
+  }, 1000)
+}
 
-```
-function moveFish(){
+One thing I'd like to improve on is the repetitive nature of my code.
 
-  fishInPlay.forEach(fish => fish.move());
-
-} // moves every fish 1 position in their respective movementPatternArrays
-```
 
 ## Future features
 
-If I had more time, I would like to try and make the game playable on a touchscreen device. I would need to make a control panel that would appear on a touch device to replace the keyboard inputs.
+If I had more time, I would like to try and make the game playable on a touchscreen device. I would need to make the grid mobile responsive and be able to see the whole game on the device screen.
 
-Different levels could be added to the game with different patterns of mine positioning and different fish spawning at different depths.
+I would like to distinguish the entrance and the exit of the tunnel by putting a different image or animation.
 
-I would also like to improve the animations of the submarine (such as adding animated bubbles when it is moving) and improving the animations of the fish, particularly in allowing them to move diagonally.
+When both player and computer are on the same square I would like them both to be visible instead of just one.
 
-
-
-Collap
+I would love to add more levels with more squares and multiple players.
