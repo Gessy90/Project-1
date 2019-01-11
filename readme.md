@@ -44,7 +44,7 @@ The aim of the game is to navigate one's game piece, according to die rolls, fro
 
 ![hitting the snails](https://media.git.generalassemb.ly/user/17645/files/8dc9e600-158a-11e9-955c-1da9d306926c)
 
-5. If they both land on a tunnel they will be transported to the other end of the tunnel.
+5. If they land on a tunnel they will be transported to the other end of the tunnel.
 
 ![tunnel jump](https://media.git.generalassemb.ly/user/17645/files/0c725380-158a-11e9-8f51-8de3e9c470c0)
 
@@ -66,7 +66,7 @@ With ladsnakes.forEach we check if the player and computer are on the same spot 
 The whole game ends thanks to the function theEnd() and the connected 'RESET' button so both classes are removed from the grid.
 
 ### Challenges
-The most challenging thing was that the player and computer are landing at the same time on the same square. I have resolved the problem by using css (transition: background 1s;) but this it's not the best way of resolving the issue.
+The most challenging thing was that the player and computer are landing at the same time on the same square. I have resolved the problem by using css (transition: background 1s;) but this is not the best way of resolving the issue.
 
 I would've liked to make it clearer to the user that the tunnel begins on square 5 and ends on square 10.
 
