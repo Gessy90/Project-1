@@ -66,13 +66,13 @@ With ladsnakes.forEach we check if the player and computer are on the same spot 
 The whole game ends thanks to the function theEnd() and the connected 'RESET' button so both classes are removed from the grid.
 
 ### Challenges
-The most challenging thing was that the player and computer are landing at the same time on the same square. I have resolved the problem by using css (transition: background 1s;) but still it's not the best way.
+The most challenging thing was that the player and computer are landing at the same time on the same square. I have resolved the problem by using css (transition: background 1s;) but this it's not the best way of resolving the issue.
 
 I would've liked to make it clearer to the user that the tunnel begins on square 5 and ends on square 10.
 
 
 ### Wins
-The game works fine and I like the sound added to the dice. I also like the fact that with the function 'waitThenRoll' the dice waits one second before rolling out.
+The game works fine and I like the sound added to the dice. I also like the fact that with the function 'waitThenRoll' the dice waits one second before rolling out so that it looks more realistic an it gives time to think to the actual player.
 
 
 function waitThenRoll(){

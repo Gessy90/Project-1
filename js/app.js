@@ -29,7 +29,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
   squares[player2position].classList.add('computer')
 
   let player1turn = true
-  //------------ FUNCTION THAT GIVES US AN INTERVAL SO THAT THE DICE THATS 1 SEC TO APPEAR-----
+  //------------ FUNCTION THAT GIVES US AN INTERVAL SO THAT THE DICE TAKES 1 SEC TO APPEAR-----
   function waitThenRoll(){
     diceSquare.innerHTML = ''
     setTimeout(() =>{
@@ -83,7 +83,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
 
 
-  // FUNCTION THAT CHECKS TO SEE WHETHER A PLAYER HAS WON EVERY TIME THEY ROLE
+  // FUNCTION THAT CHECKS TO SEE WHETHER A PLAYER HAS WON EVERY TIME THEY ROLL
   function winConditions() {
     if (player1position >= 41) {
       player1position = 41
