@@ -12,7 +12,7 @@ document.addEventListener( 'DOMContentLoaded', () =>{
 
   h1.textContent ='Snails and Tunnels'
 
-  musicButton.addEventListener('click', (e) => {
+  musicButton.addEventListener('click', () => {
     console.log('playing')
     sound.setAttribute('src','sound/shake.wav')
     sound.play()
